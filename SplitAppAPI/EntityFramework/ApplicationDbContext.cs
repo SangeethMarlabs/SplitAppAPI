@@ -11,5 +11,8 @@ namespace UserRegistration.EntityFramework
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> opt) : base(opt) { }
         public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<Expense> Expense { get; set; }
+        public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<Persons> Persons { get; set; }
     }
 }

@@ -37,6 +37,8 @@ namespace SplitAppAPI
             services.AddControllers();
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IExpenseService, ExpenseService>();
+            services.AddTransient<IPersonsService, PersonsService>();
 
             services.AddSwaggerGen(c =>
             {
